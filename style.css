@@ -1,8 +1,8 @@
-*{
-    box-sizing: border-box;
-}
+
 body{
     background: linear-gradient(to Bottom, rgb(0,77,38), rgba(0,77,38,0));
+    padding: 0px;
+    margin: 0px;
 }
 
 .navigation{
@@ -35,7 +35,7 @@ nav ul li a{
 nav ul li a:hover{
     color: black;
 }
-.main{
+.mains{
     display:flex;
     margin-top: 20px;
 }
@@ -59,4 +59,241 @@ nav ul li a:hover{
 .para{
     margin: 0 2.5rem;
     line-height: 2rem;
+}    
+span{
+    color: slategray;
+}
+
+.about-tit{
+    text-align:center;
+    font-size: 40px;   
+    text-transform: uppercase; 
+    text-decoration: underline;
+}
+table, td{
+    font-size: 25px;
+    border:1px solid transparent;
+    border-collapse: collapse;
+    padding: 5px 10px 5px 20px;
+}
+td{
+    background: #96D4D4;
+}
+.about-cont{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 1.5rem;
+    padding-bottom:5rem;
+   
+}
+.infos{
+    margin-left:7rem;
+}
+.whole{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:2rem;
+    margin-right: 5rem;
+}
+.item{
+    border: 1px solid olive;
+    box-shadow: 1px 2px 15px rgba(0,0,0,0.1);
+    height: 20vh;
+    width: 15vw;
+}
+.item:hover{
+    border:1px solid black;
+    box-shadow: 1px 4px 15px rgba(0,0,0,0.32);
+    transition: all .4s ease-in-out;
+    transform: translate(-5px);
+    cursor: pointer;
+}
+.text{
+    display:flex;
+    flex-direction: column;
+
+}
+.big{
+    font-size: 3rem;
+    
+}
+.small{
+    position:relative;
+    font-size:1.2rem;
+}
+.left{
+    margin-left: 3rem;
+}
+.title{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration:underline;
+}
+.skills .skill-content {
+    font-family:'Poppins', sans-serif;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skill-content .column{
+    width:calc(50% - 30px);
+}
+.skills .skill-content .left .text{
+    font-size: 25px ;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skill-content .left a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid red;
+    border-radius: 6px;
+    background: red;
+    padding:5px 10px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+
+}
+.skills .skill-content .left a:hover{
+    color: red;
+    background: none;
+}
+.skills .skill-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skill-content .right .infor{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3rem;
+    margin-bottom: 5px ;
+}
+.skills .skill-content .right .span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.skills .skill-content .right .line{
+    height: 5px;
+    width:100%;
+    background: lightgray;
+    position: relative;
+}
+.skills .skill-content .right .line::before{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:80%;
+    left:0;
+    right:0;
+    background:crimson;
+}
+.skills .skill-content .right .html::before{
+    width:60%;
+}
+.skills .skill-content .right .html::before{
+    width:50%;
+}
+.skills .skill-content .right .html::before{
+    width:40%;
+}
+.skills .skill-content .right .html::before{
+    width:40%;
+}
+
+.contact{
+    margin-bottom: 2rem;
+}
+.contact .contact-content .column{
+    width:calc(50% - 30px);
+} 
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+}
+.contact .contact-content .left p{
+    text-align:justify
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 55px;
+    align-items: center;
+}
+.contact .contact-content .infor .head{
+    font-weight: 100;
+} 
+.contact .contact-content{
+    display: flex;
+}
+.contact .contact-content .right{
+    margin-left: 2rem;
+}
+.contact .right form .fields{
+    display: flex; 
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height:45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height:80px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    /* width: 100%; */
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height:47px;
+    width:170px;
+    margin-top: 30px;
+}
+.contact .right form .button button{
+    height:100%;
+    width:100%;
+    border:2px solid red;
+    border-radius: 10px;
+    background: red;
+    color:white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+.contact .right form .button button:hover{
+    color:red;
+    background:none;
+}
+
+footer{
+    background: goldenrod;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .foot{
+    font-size: 2.5em;
+    color: white;
+}
+footer p{
+    color: white;
 }
