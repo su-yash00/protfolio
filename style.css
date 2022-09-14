@@ -3,6 +3,10 @@ body{
     background: linear-gradient(to Bottom, rgb(0,77,38), rgba(0,77,38,0));
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 .navigation{
@@ -14,14 +18,17 @@ nav{
     justify-content: space-between;
 }
 .logo{
+    margin-left: 1rem;
     color: white;
+}
+.logo span{
+    color: olive;
 }
 nav ul{
     border: 2px solid transparent;
     border-radius: 8px;
     padding-right: 30px; 
     background: rgba(255, 255, 255, 0.5);  
-    /* margin-left: 90px;  */
 }
 nav ul li{
     list-style-type: none;
@@ -34,6 +41,16 @@ nav ul li a{
 }  
 nav ul li a:hover{
     color: black;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 .mains{
     display:flex;
@@ -70,57 +87,75 @@ span{
     text-transform: uppercase; 
     text-decoration: underline;
 }
-table, td{
-    font-size: 25px;
-    border:1px solid transparent;
+
+table {
     border-collapse: collapse;
-    padding: 5px 10px 5px 20px;
-}
-td{
-    background: #96D4D4;
-}
+    width: 100%;
+  }
+  
+    td {
+    text-align: left;
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  tr:nth-child(odd) {background-color: rgba(255, 255, 255, 0.5);}
+
 .about-cont{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    display:flex;
+    flex-direction: row;
     padding-top: 1.5rem;
     padding-bottom:5rem;
+
    
 }
-.infos{
-    margin-left:7rem;
-}
-.whole{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap:2rem;
-    margin-right: 5rem;
-}
-.item{
-    border: 1px solid olive;
-    box-shadow: 1px 2px 15px rgba(0,0,0,0.1);
-    height: 20vh;
-    width: 15vw;
-}
-.item:hover{
-    border:1px solid black;
-    box-shadow: 1px 4px 15px rgba(0,0,0,0.32);
-    transition: all .4s ease-in-out;
-    transform: translate(-5px);
-    cursor: pointer;
-}
-.text{
-    display:flex;
-    flex-direction: column;
 
+#detail{
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
 }
-.big{
-    font-size: 3rem;
+.placeholder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 5rem;
+    margin-top: 3rem;
+  }
+  
+  .post {
+    width: 50%;
+    padding: 20px;
+    /* float: left; */
+  }
+  
+  .post-block {
+    border: 2px solid red;
+    transition: all 1s;
+    padding: 3px;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .post-block:hover{
+    transform: translate(-2px);
+    box-shadow: 5px 5px 70px rgba(0,0,0,0.15);
     
-}
-.small{
-    position:relative;
-    font-size:1.2rem;
-}
+  }
+  
+  .post h2,
+  .post p {
+    margin: 0 0 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+
 .left{
     margin-left: 3rem;
 }
@@ -152,17 +187,21 @@ td{
     border: 1px solid red;
     border-radius: 6px;
     background: red;
-    padding:5px 10px;
+    padding:10px 20px;
     cursor: pointer;
     transition: all 0.3 ease;
+    margin-top: 30px;
 
 }
 .skills .skill-content .left a:hover{
     color: red;
     background: none;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.15);
+    transition:all 0.2s;
 }
 .skills .skill-content .right .bars{
     margin-bottom: 15px;
+    margin-right: 3rem;
 }
 .skills .skill-content .right .infor{
     display:flex;
@@ -180,6 +219,7 @@ td{
     width:100%;
     background: lightgray;
     position: relative;
+    
 }
 .skills .skill-content .right .line::before{
     content:"";
@@ -189,6 +229,12 @@ td{
     left:0;
     right:0;
     background:crimson;
+}
+.skills .skill-content .right .line:hover{
+    transform: translate(-4px);
+    cursor: pointer;
+    box-shadow: -5px 5px 20px rgba(0,0,0,0.15);
+    height: 8px;
 }
 .skills .skill-content .right .html::before{
     width:60%;
@@ -279,6 +325,8 @@ td{
 .contact .right form .button button:hover{
     color:red;
     background:none;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.15);
+    transition:all 0.2s;
 }
 
 footer{
@@ -297,3 +345,14 @@ footer .foot{
 footer p{
     color: white;
 }
+footer i{
+    color: black;
+    
+}
+
+.about-container{
+    display: flex;
+
+}
+
+
